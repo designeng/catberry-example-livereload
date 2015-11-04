@@ -25,6 +25,14 @@ To start in `release` mode:
 npm start
 ```
 
+## Preproduction
+Before deploy to production do not forget to remove `<script>` tag with
+```js
+document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+  ':35729/livereload.js?snipver=1"></' + 'script>')
+```
+from `catberry_components/document/template.hbs`.
+
 ## Contribution
 If you have found a bug, please create pull request with [mocha](https://www.npmjs.org/package/mocha) 
 unit-test which reproduces it or describe all details in an issue if you can not
