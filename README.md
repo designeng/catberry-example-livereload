@@ -1,3 +1,5 @@
+### Generated with [catberry-cli](https://github.com/catberry/catberry-cli)
+
 # Catberry Example Project
 
 ![Catberry](https://raw.githubusercontent.com/catberry/catberry/master/docs/images/logo.png)
