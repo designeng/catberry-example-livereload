@@ -28,14 +28,14 @@ npm start
 ## Preproduction
 Before deploy to production do not forget:
 
-+to remove `<script>` tag with
++ to remove `<script>` tag with
 ```js
 document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
   ':35729/livereload.js?snipver=1"></' + 'script>')
 ```
 from `catberry_components/document/template.hbs`
 
-+to remove code
++ to remove code
 ```js
 var livereload = require('livereload');
 var server = livereload.createServer();
