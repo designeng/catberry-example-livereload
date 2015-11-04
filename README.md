@@ -26,12 +26,22 @@ npm start
 ```
 
 ## Preproduction
-Before deploy to production do not forget to remove `<script>` tag with
+Before deploy to production do not forget:
+
++to remove `<script>` tag with
 ```js
 document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
   ':35729/livereload.js?snipver=1"></' + 'script>')
 ```
-from `catberry_components/document/template.hbs`.
+from `catberry_components/document/template.hbs`
+
++to remove code
+```js
+var livereload = require('livereload');
+var server = livereload.createServer();
+server.watch(__dirname + "/public");
+```
+from `server.js`.
 
 ## Contribution
 If you have found a bug, please create pull request with [mocha](https://www.npmjs.org/package/mocha) 
