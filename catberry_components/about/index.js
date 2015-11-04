@@ -24,5 +24,4 @@ function About() {
  */
 About.prototype.render = function () {
     return this.$context.getStoreData();
-	// return {readmeHTML: "TEST"};
 };
